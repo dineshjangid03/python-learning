@@ -202,3 +202,42 @@ fun(10)
 
 print(sum_Of_n) # now we are able to access local variable of fun function because we make it as a global.
 # one thing we have to mind that to access a global variable of method we have to call that method otherwise it will give an error
+
+
+# input
+
+s = input() # it will take input as a string only
+print(s)
+
+int_input = input()
+int_input = int(int_input) # to take input as a int we have to type cast it
+print(type(int_input))
+
+float_input = float(input())
+print(float_input)
+
+
+# split method
+
+demo_str = "My name is Dinesh Kumar"
+
+splited_str = demo_str.split(" ") # split method will split string with the passed argument
+
+print(splited_str) # ['My', 'name', 'is', 'Dinesh', 'Kumar']
+
+
+# map
+
+int_in_char = ['4', '5', '9', '7']
+print(int_in_char) # ['4', '5', '9', '7']
+
+map_to_int = list(map(int, int_in_char))
+print(map_to_int) # [4, 5, 9, 7]
+
+def square(n):
+    return n ** 2
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+squared_numbers = list(map(square,numbers))
+print(squared_numbers) # [1, 4, 9, 16, 25, 36]
