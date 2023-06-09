@@ -73,8 +73,10 @@ check2 = 6 == 6 and 6 < 5
 num = 6
 if num > 5 :
     print("number is greater than 5")
+elif num < 5 :
+    print("number is less than 5")
 else :
-    print("number less than or equal to 5")
+    print("num is 5")
 
 
 # loop -> for , while
