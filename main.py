@@ -131,3 +131,74 @@ last_name = "Kumar"
 full_name = first_name + last_name
 
 sub_string = full_name[:6] # 0th index to 6-1 index
+
+
+# functions
+
+def check_prime(n):
+    if n<2 :
+        return False
+    
+    if n==2:
+        return True
+    
+    for i in range(2,int(n/2)+1,1):
+        if n%i == 0:
+            return False
+        
+    return True
+
+print(check_prime(12))
+
+
+# var args in functions
+
+def sum_of_n_number(*numbers):
+    sum = 0
+    for i in numbers:
+        sum += i
+
+    return sum
+
+print(sum_of_n_number(2,6,5,8,4,5,5))
+
+print(sum_of_n_number(2,6,5,8,4,5,5,10))
+
+
+# variable scope
+
+# global variable & local variable
+
+global_variable = 20
+
+print(global_variable)
+
+def fun(n):
+
+    sum_till_n = 0 # local variable we are not able to access it outside this function
+
+    for i in range(1,n,1):
+        sum_till_n += i
+
+    print(sum_till_n)
+
+
+# print(sum_till_n)  here if we try to access it will give an error
+
+# so to make local variable as a global we ca use global keyword
+
+
+def fun(n):
+
+    global sum_Of_n # here this variable is in global scope we can access it outside this function
+    sum_Of_n = 0 
+
+    for i in range(1,n,1):
+        sum_Of_n += i
+
+    print(sum_Of_n)
+
+fun(10)
+
+print(sum_Of_n) # now we are able to access local variable of fun function because we make it as a global.
+# one thing we have to mind that to access a global variable of method we have to call that method otherwise it will give an error
