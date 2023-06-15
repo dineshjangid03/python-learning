@@ -241,3 +241,58 @@ numbers = [1, 2, 3, 4, 5, 6]
 
 squared_numbers = list(map(square,numbers))
 print(squared_numbers) # [1, 4, 9, 16, 25, 36]
+
+
+# containers
+# List
+
+li = [1,2,3,4,5,6,7,8,9]
+
+# len
+length_of_li = len(li) # it will return the length of list
+
+# append
+li.append(10) # it will add element in list
+
+# insert
+li.insert(2,3) # it will add element at specific index
+
+# count
+count_of_three = li.count(3) # it will count how many time number occurred
+
+# pop
+li.pop() # it will delete last element of list
+
+
+# Set
+
+set_of_num = set() # set will store distinct element
+
+set_of_num.add(1)
+set_of_num.add(2)
+set_of_num.add(2)
+set_of_num.add(3)
+set_of_num.add(4)
+
+print(set_of_num) # 1 2 3 4
+
+# Dictionary
+# it will store elements in key value pair
+
+students_marks = {
+    "Ram" : 10,
+    "Shyam" : 15,
+    "Ramesh" : 12
+}
+
+print(students_marks) # {'Ram': 10, 'Shyam': 15, 'Ramesh': 12}
+
+print(students_marks["Ram"])
+
+for key in students_marks:
+    print(key)
+    print(students_marks[key])
+
+for key,value in students_marks.items():
+    print(key)
+    print(value)
