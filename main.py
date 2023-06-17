@@ -296,3 +296,15 @@ for key in students_marks:
 for key,value in students_marks.items():
     print(key)
     print(value)
+
+
+# printing
+
+name = "Dinesh"
+age = 23
+
+print("my name is %s and age is %d." %(name, age))
+
+print("my name is {} and age is {}." .format(name, age))
+
+print("my name is", name, "and age is", age , sep=" ", end=".")
